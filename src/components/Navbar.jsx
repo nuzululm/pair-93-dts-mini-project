@@ -10,8 +10,8 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-neutral-900">
-        <div className="max-w-7xl h-100 mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img className="h-8 w-8" src={Logo} alt="Logo" />
@@ -22,31 +22,19 @@ const Navbar = () => {
                     Home
                   </a>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular"
-                  >
+                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
                     Series
                   </a>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular"
-                  >
+                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
                     Movies
                   </a>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular"
-                  >
+                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
                     New and Popular
                   </a>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular"
-                  >
+                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
                     My List
                   </a>
                 </div>
@@ -77,14 +65,8 @@ const Navbar = () => {
                       aria-labelledby="user-menu-button"
                       tabIndex="-1"
                     >
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-white"
-                        role="menuitem"
-                        tabIndex="-1"
-                        id="user-menu-item-2"
-                      >
-                        Sign out
+                      <a href="#" className="block px-4 py-2 text-sm text-white" role="menuitem" tabIndex="-1" id="user-menu-item-2">
+                        Logout
                       </a>
                     </div>
                   )}
@@ -102,25 +84,11 @@ const Navbar = () => {
               >
                 <span className="sr-only">Open main menu</span>
                 {!isMobileOpen ? (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
+                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 ) : (
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
+                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 )}
@@ -145,31 +113,19 @@ const Navbar = () => {
                 Home
               </a>
 
-              <a
-                href="#"
-                className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular"
-              >
+              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
                 Series
               </a>
 
-              <a
-                href="#"
-                className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular"
-              >
+              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
                 Movies
               </a>
 
-              <a
-                href="#"
-                className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular"
-              >
+              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
                 New and Popular
               </a>
 
-              <a
-                href="#"
-                className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular"
-              >
+              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
                 My List
               </a>
             </div>
@@ -185,11 +141,8 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="mt-3 px-2 space-y-1">
-                <a
-                  href="#"
-                  className="block px-3 py-2 rounded-md text-base font-regular text-gray-400 hover:text-white hover:bg-neutral-700"
-                >
-                  Sign out
+                <a href="#" className="block px-3 py-2 rounded-md text-base font-regular text-gray-400 hover:text-white hover:bg-neutral-700">
+                  Logout
                 </a>
               </div>
             </div>
