@@ -3,38 +3,135 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="text-center lg:text-left bg-neutral-900 text-gray-300">
-        <div className="mx-6 py-10 text-center md:text-left">
-          <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="mx-auto">
+      <footer className="bg-neutral-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start justify-between h-100">
+            <div className="mx-auto my-4">
               <p className="mb-4">
-                <a href="#!" className="text-gray-400 hover:text-gray-300 text-sm">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
                   Audio and Subtitles
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-400 hover:text-gray-300 text-sm">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
                   Media Center
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-400 hover:text-gray-300 text-sm">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
                   Security
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-400 hover:text-gray-300 text-sm">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
                   Contact Us
                 </a>
               </p>
               <div className="border-solid border-2 border-gray-400 py-2 px-2 flex aligns-center justify-center">
-                <p className="text-gray-400 hover:text-gray-300 text-sm">Service Code</p>
+                <p className="text-gray-400 hover:text-gray-300 text-sm">
+                  Service Code
+                </p>
               </div>
             </div>
+
+            <div className="mx-auto my-4">
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Audio Description
+                </a>
+              </p>
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Investor Relations
+                </a>
+              </p>
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Legal Provisions
+                </a>
+              </p>
+            </div>
+
+            <div className="mx-auto my-4">
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Help center
+                </a>
+              </p>
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Jobs
+                </a>
+              </p>
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Cookie Preferences
+                </a>
+              </p>
+            </div>
+
+            <div className="mx-auto my-4">
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Gift Cards
+                </a>
+              </p>
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Terms of Use
+                </a>
+              </p>
+              <p className="mb-4">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-gray-300 text-sm"
+                >
+                  Corporate Information
+                </a>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="text-center p-4 text-xs text-gray-400">
-          <span>© 2022 Movies, All Right Reserved</span>
+          <div className="flex items-center justify-center">
+            <div className="text-center p-4 text-xs text-gray-400">
+              <span>© 2022 Movies, All Right Reserved</span>
+            </div>
+          </div>
         </div>
       </footer>
     </>

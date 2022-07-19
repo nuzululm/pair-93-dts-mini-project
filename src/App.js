@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <div className="w-full h-24 bg-white"></div>
       <Footer />
     </div>
   );
