@@ -14,31 +14,21 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="#" className="text-white px-3 py-2 rounded-md text-sm font-medium">
+                <p className="text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
                   <img className="h-8 w-8" src={Logo} alt="Logo" />
-                </a>
+                </p>
               </div>
               <div className="hidden md:block">
                 <div className="ml-40 flex items-baseline">
-                  <a href="#" className="text-white px-3 py-2 rounded-md text-sm font-medium">
-                    Home
-                  </a>
+                  <button className="text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Home</button>
 
-                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
-                    Series
-                  </a>
+                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Series</button>
 
-                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
-                    Movies
-                  </a>
+                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Movies</button>
 
-                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
-                    New and Popular
-                  </a>
+                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">New and Popular</button>
 
-                  <a href="#" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular">
-                    My List
-                  </a>
+                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">My List</button>
                 </div>
               </div>
             </div>
@@ -57,9 +47,9 @@ const Navbar = () => {
                     >
                       <span className="sr-only">Open user menu</span>
                       <p className="mx-2">
-                        <a href="">emailuser@gmail.com</a>
+                        <button className="cursor-pointer">emailuser@gmail.com</button>
                       </p>
-                      <img className="h-8 w-8 rounded-lg" src={ProfileImage} alt="Profile Photo" />
+                      <img className="h-8 w-8 rounded-lg" src={ProfileImage} alt="Profile" />
                     </button>
                   </div>
                   {isUserOpen && (
@@ -70,9 +60,9 @@ const Navbar = () => {
                       aria-labelledby="user-menu-button"
                       tabIndex="-1"
                     >
-                      <a href="#" className="block px-4 py-2 text-sm text-white" role="menuitem" tabIndex="-1" id="user-menu-item-2">
+                      <button className="block px-4 py-2 text-sm text-white cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">
                         Logout
-                      </a>
+                      </button>
                     </div>
                   )}
                 </div>
@@ -114,31 +104,23 @@ const Navbar = () => {
         >
           <div className="md:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#" className="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
+              <button className="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
                 Home
-              </a>
+              </button>
 
-              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
-                Series
-              </a>
+              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Series</button>
 
-              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
-                Movies
-              </a>
+              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Movies</button>
 
-              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
-                New and Popular
-              </a>
+              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">New and Popular</button>
 
-              <a href="#" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular">
-                My List
-              </a>
+              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">My List</button>
             </div>
             {/* User Mobile  */}
             <div className="pt-4 pb-3 border-t border-neutral-700">
               <div className="flex items-center px-5">
                 <div className="flex-shrink-0">
-                  <img className="h-10 w-10 rounded-lg" src={ProfileImage} alt="Profile Photo" />
+                  <img className="h-10 w-10 rounded-lg" src={ProfileImage} alt="Profile" />
                 </div>
                 <div className="ml-3">
                   <div className="text-base font-medium leading-none text-white">DTS Member</div>
@@ -146,9 +128,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="mt-3 px-2 space-y-1">
-                <a href="#" className="block px-3 py-2 rounded-md text-base font-regular text-gray-400 hover:text-white hover:bg-neutral-700">
-                  Logout
-                </a>
+                <button className="block px-3 py-2 rounded-md text-base font-regular text-gray-400 hover:text-white hover:bg-neutral-700">Logout</button>
               </div>
             </div>
           </div>

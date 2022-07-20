@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import API_URL from "../config/config";
+import API_URL from "../config/api";
 
 const Main = () => {
   const [movies, setMovies] = useState([]);

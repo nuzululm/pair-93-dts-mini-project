@@ -8,81 +8,59 @@ const Footer = () => {
           <div className="flex items-start justify-between h-100 pt-4">
             <div className="mx-auto my-4">
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Audio and Subtitles
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Audio and Subtitles</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Media Center
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Media Center</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
+                <p href="#" className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">
                   Security
-                </a>
+                </p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
+                <p href="#" className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">
                   Contact Us
-                </a>
+                </p>
               </p>
-              <div className="border-solid border-2 border-gray-400 py-2 px-2 flex aligns-center justify-center">
+              <div className="border-solid border-2 border-gray-400 py-2 px-2 flex aligns-center justify-center cursor-pointer">
                 <p className="text-gray-400 hover:text-gray-300 text-sm">Service Code</p>
               </div>
             </div>
 
             <div className="mx-auto my-4">
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Audio Description
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Audio Description</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Investor Relations
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Investor Relations</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Legal Provisions
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Legal Provisions</p>
               </p>
             </div>
 
             <div className="mx-auto my-4">
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Help center
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Help center</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Jobs
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Jobs</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Cookie Preferences
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Cookie Preferences</p>
               </p>
             </div>
 
             <div className="mx-auto my-4">
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Gift Cards
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Gift Cards</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Terms of Use
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Terms of Use</p>
               </p>
               <p className="mb-4">
-                <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
-                  Corporate Information
-                </a>
+                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Corporate Information</p>
               </p>
             </div>
           </div>
