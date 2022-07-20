@@ -14,7 +14,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <img className="h-8 w-8" src={Logo} alt="Logo" />
+                <a href="#" className="text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <img className="h-8 w-8" src={Logo} alt="Logo" />
+                </a>
               </div>
               <div className="hidden md:block">
                 <div className="ml-40 flex items-baseline">
@@ -48,12 +50,15 @@ const Navbar = () => {
                     <button
                       type="button"
                       onClick={() => setIsUserOpen(!isUserOpen)}
-                      className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                      className="max-w-xs bg-neutral-900 rounded-lg flex items-center text-sm focus:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-offset-neutral-900 hover:ring-white text-gray-300 hover:text-white font-regular hover:font-medium"
                       id="user-menu-button"
                       aria-expanded="false"
                       aria-haspopup="true"
                     >
                       <span className="sr-only">Open user menu</span>
+                      <p className="mx-2">
+                        <a href="">emailuser@gmail.com</a>
+                      </p>
                       <img className="h-8 w-8 rounded-lg" src={ProfileImage} alt="Profile Photo" />
                     </button>
                   </div>

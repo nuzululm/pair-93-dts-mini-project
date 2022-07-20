@@ -1,16 +1,19 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Carousel from "./components/Carousel";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <Carousel />
-      <div className="flex items-center justify-between h-20"></div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
       <Footer />
-    </div>
+    </>
   );
 }
 

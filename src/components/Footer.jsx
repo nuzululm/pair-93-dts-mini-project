@@ -3,11 +3,11 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-neutral-900 text-gray-300">
+      <footer className="bg-neutral-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start justify-between">
-            <div className="mx-auto">
-              <p className="mb-4 mt-4">
+          <div className="flex items-start justify-between h-100">
+            <div className="mx-auto my-4">
+              <p className="mb-4">
                 <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
                   Audio and Subtitles
                 </a>
@@ -30,14 +30,10 @@ const Footer = () => {
               <div className="border-solid border-2 border-gray-400 py-2 px-2 flex aligns-center justify-center">
                 <p className="text-gray-400 hover:text-gray-300 text-sm">Service Code</p>
               </div>
-
-              <div className="pt-4 pb-4 text-xs text-gray-400">
-                <span>© 2022 Movies, All Right Reserved</span>
-              </div>
             </div>
 
-            <div className="mx-auto">
-              <p className="mb-4 mt-4">
+            <div className="mx-auto my-4">
+              <p className="mb-4">
                 <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
                   Audio Description
                 </a>
@@ -54,8 +50,8 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="mx-auto">
-              <p className="mb-4 mt-4">
+            <div className="mx-auto my-4">
+              <p className="mb-4">
                 <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
                   Help center
                 </a>
@@ -72,8 +68,8 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="mx-auto">
-              <p className="mb-4 mt-4">
+            <div className="mx-auto my-4">
+              <p className="mb-4">
                 <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
                   Gift Cards
                 </a>
@@ -88,6 +84,11 @@ const Footer = () => {
                   Corporate Information
                 </a>
               </p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="text-center p-4 text-xs text-gray-400">
+              <span>© 2022 Movies, All Right Reserved</span>
             </div>
           </div>
         </div>
