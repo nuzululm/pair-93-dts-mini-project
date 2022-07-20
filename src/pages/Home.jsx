@@ -1,12 +1,12 @@
 import React from "react";
-import Main from "../components/Main";
+import MainHero from "../components/MainHero";
 import Row from "../components/Row";
 import API_URL from "../config/api";
 
 const Home = () => {
   return (
     <>
-      <Main />
+      <MainHero />
       <Row title="Now Playing" fetchURL={API_URL.nowPlayingMovie} rowID="1" />
       <Row title="Popular" fetchURL={API_URL.popularMovie} rowID="2" />
       <Row title="Up Coming" fetchURL={API_URL.upcomingMovie} rowID="3" />

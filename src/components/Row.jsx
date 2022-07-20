@@ -12,7 +12,7 @@ const Row = ({ title, fetchURL, rowID }) => {
     });
   }, [fetchURL]);
 
-  const slideLeft = (rowID) => {
+  const slideLeft = () => {
     let slider = document.getElementById("slider" + rowID);
     slider.scrollLeft = slider.scrollLeft - 500;
   };
