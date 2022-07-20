@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-neutral-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start justify-between h-100">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start justify-between h-100 pt-4">
             <div className="mx-auto my-4">
               <p className="mb-4">
                 <a href="#" className="text-gray-400 hover:text-gray-300 text-sm">
