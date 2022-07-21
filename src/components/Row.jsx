@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Movie from "./Movie";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 
-const Row = ({ title, fetchURL, rowID }) => {
+const Row = ({ title, fetchURL, rowID, type = "movie" }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Row = ({ title, fetchURL, rowID }) => {
 
         <div id={"slider" + rowID} className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative">
           {movies.map((item, id) => (
-            <Movie key={id} item={item} />
+            <Movie key={id} item={item} type={type} />
           ))}
         </div>
         <GoChevronRight onClick={slideRight} className="text-white right-0 absolute opacity-80 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block" size={40} />

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import API_URL from "../config/api";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -34,7 +34,7 @@ const MainHero = () => {
         {movies.map((item, id) => (
           <SwiperSlide key={id}>
             <div className="w-full h-[600px] text-white inline-block cursor-pointer relative">
-              <Link to={`/movie/${item.id}`} className="w-full h-full">
+              <Link to={`/movie/${item.id}?type=movie`} className="w-full h-full">
                 <div className="absolute w-full h-[600px] bg-gradient-to-r from-black"></div>
                 <img className="w-full h-full object-cover" src={`https://image.tmdb.org/t/p/original/${item?.backdrop_path}`} alt={item?.title} />
                 <div className="absolute top-[20%] p-20 md:p-30">
