@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 const Detail = () => {
   let params = useParams();
-  let [queryStrings, setQueryStrings] = useSearchParams();
+  let [queryStrings] = useSearchParams();
 
   return (
     <>
