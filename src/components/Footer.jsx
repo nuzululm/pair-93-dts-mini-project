@@ -8,20 +8,20 @@ const Footer = () => {
           <div className="flex items-start justify-between h-100 pt-4">
             <div className="mx-auto my-4">
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Audio and Subtitles</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Audio and Subtitles</button>
               </p>
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Media Center</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Media Center</button>
               </p>
               <p className="mb-4">
-                <p href="#" className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">
                   Security
-                </p>
+                </button>
               </p>
               <p className="mb-4">
-                <p href="#" className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">
                   Contact Us
-                </p>
+                </button>
               </p>
               <div className="border-solid border-2 border-gray-400 py-2 px-2 flex aligns-center justify-center cursor-pointer">
                 <p className="text-gray-400 hover:text-gray-300 text-sm">Service Code</p>
@@ -30,37 +30,37 @@ const Footer = () => {
 
             <div className="mx-auto my-4">
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Audio Description</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Audio Description</button>
               </p>
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Investor Relations</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Investor Relations</button>
               </p>
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Legal Provisions</p>
-              </p>
-            </div>
-
-            <div className="mx-auto my-4">
-              <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Help center</p>
-              </p>
-              <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Jobs</p>
-              </p>
-              <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Cookie Preferences</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Legal Provisions</button>
               </p>
             </div>
 
             <div className="mx-auto my-4">
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Gift Cards</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Help center</button>
               </p>
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Terms of Use</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Jobs</button>
               </p>
               <p className="mb-4">
-                <p className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Corporate Information</p>
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Cookie Preferences</button>
+              </p>
+            </div>
+
+            <div className="mx-auto my-4">
+              <p className="mb-4">
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Gift Cards</button>
+              </p>
+              <p className="mb-4">
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Terms of Use</button>
+              </p>
+              <p className="mb-4">
+                <button className="text-gray-400 hover:text-gray-300 text-sm cursor-pointer">Corporate Information</button>
               </p>
             </div>
           </div>

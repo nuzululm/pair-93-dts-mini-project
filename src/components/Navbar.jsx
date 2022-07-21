@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Logo from "../assets/logo.png";
 import ProfileImage from "../assets/profile.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -20,15 +21,15 @@ const Navbar = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-40 flex items-baseline">
-                  <button className="text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Home</button>
+                  <Link to="/" className="text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Home</Link>
 
-                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Series</button>
+                  <Link to="/series" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Series</Link>
 
-                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Movies</button>
+                  <Link to="/movies" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Movies</Link>
 
-                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">New and Popular</button>
+                  <Link to="/popular" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">New and Popular</Link>
 
-                  <button className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">My List</button>
+                  <Link to="/" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">My List</Link>
                 </div>
               </div>
             </div>
@@ -46,8 +47,8 @@ const Navbar = () => {
                       aria-haspopup="true"
                     >
                       <span className="sr-only">Open user menu</span>
-                      <p className="mx-2">
-                        <button className="cursor-pointer">emailuser@gmail.com</button>
+                      <p className="mx-2 cursor-pointer">
+                        emailuser@gmail.com
                       </p>
                       <img className="h-8 w-8 rounded-lg" src={ProfileImage} alt="Profile" />
                     </button>
@@ -104,17 +105,17 @@ const Navbar = () => {
         >
           <div className="md:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <button className="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
+              <Link to="/" className="text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">
                 Home
-              </button>
+              </Link>
 
-              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Series</button>
+              <Link to="/series" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Series</Link>
 
-              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Movies</button>
+              <Link to="/movie" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Movies</Link>
 
-              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">New and Popular</button>
+              <Link to="/popular" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">New and Popular</Link>
 
-              <button className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">My List</button>
+              <Link to="/" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">My List</Link>
             </div>
             {/* User Mobile  */}
             <div className="pt-4 pb-3 border-t border-neutral-700">
