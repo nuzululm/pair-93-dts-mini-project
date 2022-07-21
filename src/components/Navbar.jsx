@@ -47,7 +47,7 @@ const Navbar = () => {
                     New and Popular
                   </Link>
 
-                  <Link to="/" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">
+                  <Link to="/mylist" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">
                     My List
                   </Link>
                 </div>
@@ -142,7 +142,7 @@ const Navbar = () => {
                 Series
               </Link>
 
-              <Link to="/movie" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
+              <Link to="/movies" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
                 Movies
               </Link>
 
@@ -150,24 +150,37 @@ const Navbar = () => {
                 New and Popular
               </Link>
 
-              <Link to="/" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
+              <Link to="/mylist" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
                 My List
               </Link>
             </div>
             {/* User Mobile  */}
             <div className="pt-4 pb-3 border-t border-neutral-700">
-              <div className="flex items-center px-5">
-                <div className="flex-shrink-0">
-                  <img className="h-10 w-10 rounded-lg" src={ProfileImage} alt="Profile" />
+              {user ? (
+                <div>
+                  <div className="flex items-center px-5">
+                    <div className="flex-shrink-0">
+                      <img className="h-10 w-10 rounded-lg" src={ProfileImage} alt="Profile" />
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-sm font-semibold leading-none text-gray-400 ">{user.email}</div>
+                    </div>
+                  </div>
+                  <div className="mt-3 px-2 space-y-1">
+                    <button onClick={onLogout} className="block px-3 py-2 rounded-md text-base font-regular text-gray-400 hover:text-white hover:bg-neutral-700">
+                      Logout
+                    </button>
+                  </div>
                 </div>
-                <div className="ml-3">
-                  <div className="text-base font-medium leading-none text-white">DTS Member</div>
-                  <div className="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
+              ) : (
+                <div>
+                  <div className="mt-3 px-2 space-y-1">
+                    <Link to="/who" className="block px-3 py-2 rounded-md text-base font-regular text-gray-400 hover:text-white hover:bg-neutral-700">
+                      Login
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div className="mt-3 px-2 space-y-1">
-                <button className="block px-3 py-2 rounded-md text-base font-regular text-gray-400 hover:text-white hover:bg-neutral-700">Logout</button>
-              </div>
+              )}
             </div>
           </div>
         </Transition>

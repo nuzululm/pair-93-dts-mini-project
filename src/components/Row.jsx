@@ -8,8 +8,12 @@ const Row = ({ title, fetchURL, rowID }) => {
 
   useEffect(() => {
     const getmovies = async () => {
-      const response = await axios.get(fetchURL);
-      setMovies(response?.data?.results);
+      try {
+        const response = await axios.get(fetchURL);
+        setMovies(response?.data?.results);
+      } catch (error) {
+        console.log(error);
+      }
     };
     getmovies();
   }, [fetchURL]);

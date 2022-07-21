@@ -12,6 +12,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<Home />} />
+        <Route path="/series" element={<Home />} />
+        <Route path="/popular" element={<Home />} />
+        <Route path="/mylist" element={<Home />} />
 
         {/* protect route  */}
         <Route
