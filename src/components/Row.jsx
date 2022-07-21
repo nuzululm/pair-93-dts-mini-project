@@ -7,9 +7,11 @@ const Row = ({ title, fetchURL, rowID }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    axios.get(fetchURL).then((response) => {
+    const getmovies = async () => {
+      const response = await axios.get(fetchURL);
       setMovies(response?.data?.results);
-    });
+    };
+    getmovies();
   }, [fetchURL]);
 
   const slideLeft = () => {
