@@ -5,15 +5,40 @@ import Detail from "./pages/Detail";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Who from "./pages/Who";
+import RouteProtected from "./components/RouteProtected";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movie/:movieID" element={<Detail />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+
+        {/* protect route  */}
+        <Route
+          path="/movie/:movieID"
+          element={
+            <RouteProtected>
+              <Detail />
+            </RouteProtected>
+          }
+        />
+
+        <Route
+          path="/login"
+          element={
+            <RouteProtected loginOnly={false}>
+              <Login />
+            </RouteProtected>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <RouteProtected loginOnly={false}>
+              <Register />
+            </RouteProtected>
+          }
+        />
         <Route path="/who" element={<Who />} />
       </Routes>
     </>

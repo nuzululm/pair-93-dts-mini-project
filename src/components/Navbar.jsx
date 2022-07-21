@@ -3,10 +3,20 @@ import { Transition } from "@headlessui/react";
 import Logo from "../assets/logo.png";
 import ProfileImage from "../assets/profile.png";
 import { Link } from "react-router-dom";
+import { auth, logout } from "../config/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { RiLoginBoxLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isUserOpen, setIsUserOpen] = useState(false);
+
+  const [user] = useAuthState(auth);
+
+  const onLogout = () => {
+    logout();
+    setIsUserOpen(!isUserOpen);
+  };
 
   return (
     <>
@@ -21,15 +31,25 @@ const Navbar = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-40 flex items-baseline">
-                  <Link to="/" className="text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Home</Link>
+                  <Link to="/" className="text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">
+                    Home
+                  </Link>
 
-                  <Link to="/series" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Series</Link>
+                  <Link to="/series" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">
+                    Series
+                  </Link>
 
-                  <Link to="/movies" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">Movies</Link>
+                  <Link to="/movies" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">
+                    Movies
+                  </Link>
 
-                  <Link to="/popular" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">New and Popular</Link>
+                  <Link to="/popular" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">
+                    New and Popular
+                  </Link>
 
-                  <Link to="/" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">My List</Link>
+                  <Link to="/" className="text-gray-300 hover:text-white hover:font-medium px-3 py-2 rounded-md text-sm font-regular cursor-pointer">
+                    My List
+                  </Link>
                 </div>
               </div>
             </div>
@@ -37,31 +57,40 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-4 flex items-center md:ml-6">
                 <div className="ml-3 relative">
-                  <div>
-                    <button
-                      type="button"
-                      onClick={() => setIsUserOpen(!isUserOpen)}
+                  {user ? (
+                    <div>
+                      <button
+                        type="button"
+                        onClick={() => setIsUserOpen(!isUserOpen)}
+                        className="max-w-xs bg-neutral-900 rounded-lg flex items-center text-sm focus:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-offset-neutral-900 hover:ring-white text-gray-300 hover:text-white font-regular hover:font-medium"
+                        id="user-menu-button"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                      >
+                        <span className="sr-only">Open user menu</span>
+                        <p className="mx-2 cursor-pointer">{user.email}</p>
+                        <img className="h-8 w-8 rounded-lg" src={ProfileImage} alt="Profile" />
+                      </button>
+                    </div>
+                  ) : (
+                    <Link
+                      to="/who"
                       className="max-w-xs bg-neutral-900 rounded-lg flex items-center text-sm focus:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-offset-neutral-900 hover:ring-white text-gray-300 hover:text-white font-regular hover:font-medium"
-                      id="user-menu-button"
-                      aria-expanded="false"
-                      aria-haspopup="true"
                     >
-                      <span className="sr-only">Open user menu</span>
-                      <p className="mx-2 cursor-pointer">
-                        emailuser@gmail.com
-                      </p>
-                      <img className="h-8 w-8 rounded-lg" src={ProfileImage} alt="Profile" />
-                    </button>
-                  </div>
+                      <p className="mx-2 cursor-pointer text-md">Login</p>
+                      <RiLoginBoxLine className="h-5 w-5" />
+                    </Link>
+                  )}
+
                   {isUserOpen && (
                     <div
-                      className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-neutral-700 ring-1 ring-black ring-opacity-5 focus:outline-none"
+                      className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-neutral-700 ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
                       role="menu"
                       aria-orientation="vertical"
                       aria-labelledby="user-menu-button"
                       tabIndex="-1"
                     >
-                      <button className="block px-4 py-2 text-sm text-white cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">
+                      <button onClick={onLogout} className="block px-4 py-2 text-sm text-white cursor-pointer" role="menuitem" tabIndex="-1" id="user-menu-item-2">
                         Logout
                       </button>
                     </div>
@@ -109,13 +138,21 @@ const Navbar = () => {
                 Home
               </Link>
 
-              <Link to="/series" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Series</Link>
+              <Link to="/series" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
+                Series
+              </Link>
 
-              <Link to="/movie" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">Movies</Link>
+              <Link to="/movie" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
+                Movies
+              </Link>
 
-              <Link to="/popular" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">New and Popular</Link>
+              <Link to="/popular" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
+                New and Popular
+              </Link>
 
-              <Link to="/" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">My List</Link>
+              <Link to="/" className="text-gray-300 hover:font-medium hover:text-white block px-3 py-2 rounded-md text-base font-regular cursor-pointer">
+                My List
+              </Link>
             </div>
             {/* User Mobile  */}
             <div className="pt-4 pb-3 border-t border-neutral-700">
